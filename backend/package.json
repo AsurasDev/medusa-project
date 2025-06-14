@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@medusajs/admin-sdk": "latest",
-    "@medusajs/cli": "latest",
     "@medusajs/core-flows": "latest",
     "@medusajs/framework": "latest",
     "@medusajs/medusa": "latest",
