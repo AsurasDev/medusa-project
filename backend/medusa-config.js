@@ -147,7 +147,10 @@ const medusaConfig = {
           }
         }
       }
-    }] : [])
+    }] : []),
+    {
+    resolve: `medusa-plugin-wishlist`,
+  }
   ]
 };
 
