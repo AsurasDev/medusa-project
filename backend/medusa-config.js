@@ -130,7 +130,7 @@ const medusaConfig = {
     }] : [])
   ],
   plugins: [
-  ...(MEILISEARCH_HOST && MEILISEARCH_ADMIN_KEY ? [{
+    ...(MEILISEARCH_HOST && MEILISEARCH_ADMIN_KEY ? [{
       resolve: '@rokmohar/medusa-plugin-meilisearch',
       options: {
         config: {
@@ -147,7 +147,20 @@ const medusaConfig = {
           }
         }
       }
-    }] : [])
+    }] : []),
+    {
+      resolve: 'medusa-plugin-wishlist',
+      options: {
+        enableUI: true,
+        customerKeyPrefix: 'wishlist_',
+        // Optional: customize endpoints
+        endpoints: {
+          addToWishlist: '/store/wishlist/add',
+          removeFromWishlist: '/store/wishlist/remove',
+          getWishlist: '/store/wishlist'
+        }
+      }
+    }
   ]
 };
 
